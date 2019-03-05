@@ -20,7 +20,6 @@ body {
   margin: 0;
   font-family: $body-font;
 
-  padding-top: calc(35px * 2 + 1em); // TODO: This needs work - this is the nav bar height
 }
 
 .browserupgrade {
@@ -39,9 +38,6 @@ body {
 nav {
   background: $nav-background-color;
   color: $nav-color;
-  position: fixed;
-  top: 0;
-  width: 100%;
 
   display: flex;
   justify-content: space-between;
@@ -67,8 +63,8 @@ nav {
     display: block;
     font-size: 1.2em;
 
-    .active, &:hover {
-      background: rgba(0, 0, 0, 0.25);
+    &.router-link-exact-active, &:hover {
+      background: rgba(0, 0, 0, 0.45);
     }
   }
 }
