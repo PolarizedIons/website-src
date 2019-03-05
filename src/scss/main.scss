@@ -1,0 +1,67 @@
+$nav-background-color: #444;
+
+$text-color: #fafafa;
+
+$header-font: "Montserrat";
+$body-font: "Raleway";
+
+* {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+}
+
+body {
+  background: #dadada;
+  padding: 0;
+  margin: 0;
+  font-family: $body-font;
+
+  padding-top: calc(35px * 2 + 1em); // TODO: This needs work
+}
+
+.browserupgrade {
+  margin: 0;
+  padding: 40px 30px;
+
+  background: #bd2525;
+  color: $text-color;
+  text-align: center;
+
+  a {
+    color: #6ab2e0;
+  }
+}
+
+nav {
+  background: $nav-background-color;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+
+  ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    padding: 35px 30px;
+    text-decoration: none;
+    color: $text-color;
+    display: block;
+    background: red;
+  }
+}
+

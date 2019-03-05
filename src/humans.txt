@@ -1,0 +1,9 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+PolarizedIons - @polarizedions on twitter
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Normalize.css, parcel, node & yarn
