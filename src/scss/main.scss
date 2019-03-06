@@ -41,6 +41,10 @@ nav {
   padding-left: 20px;
   
 
+  @media screen and (max-width: 680px) {
+    flex-direction: column;
+  }
+
   ul {
     list-style: none;
     display: flex;
