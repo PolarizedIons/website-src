@@ -4,11 +4,11 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter)
 
 // @ts-ignore
-import HomePage from '../components/HomePage.vue';
+import HomePage from '../components/pages/HomePage.vue';
 // @ts-ignore
-import AboutPage from '../components/AboutPage.vue';
+import AboutPage from '../components/pages/AboutPage.vue';
 // @ts-ignore
-import SocialPage from '../components/SocialPage.vue';
+import SocialPage from '../components/pages/SocialPage.vue';
 
 export const routes = [
     {

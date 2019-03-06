@@ -1,10 +1,5 @@
-$nav-background-color: #222235;
-$nav-color: #dadada;
-
-$text-color: #fafafa;
-
-$header-font: "Montserrat";
-$body-font: "Raleway";
+@import 'variables';
+@import 'pages';
 
 * {
 	box-sizing: border-box;

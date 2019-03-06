@@ -1,0 +1,48 @@
+.page-social-media {
+    .socials {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 10%;
+
+        .item {
+            margin: 5px 10px;
+            padding: 5px 10px 5px;
+            box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.25);
+            background: #fafafa;
+            transition: background ease 0.2s;
+
+            &:hover {
+                background: #e1e1e1;
+            }
+            
+
+            a {
+                display: flex;
+                align-items: center;
+
+                border-bottom: 0;
+            }
+
+            img {
+                margin-right: 10px;
+                width: 64px;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+
+                span {
+                    display: block;
+                }
+
+                .name {
+                    font-size: 1.3em;
+                }
+            }
+        }
+    }
+}
