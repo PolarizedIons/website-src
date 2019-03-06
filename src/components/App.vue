@@ -1,7 +1,7 @@
 <template>
-    <div id="site">
+    <div id="app">
         <nav-bar></nav-bar>
-        <router-view></router-view>
+        <router-view id="content" :class="`page page-${this.$route.meta.id}`"></router-view>
     </div>
 </template>
 
