@@ -1,0 +1,80 @@
+==================================================================
+https://keybase.io/polarizedions
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://polarizedions.net
+  * I am polarizedions (https://keybase.io/polarizedions) on keybase.
+  * I have a public key with fingerprint 6C56 417A E251 6AF4 57BA  704D 849D 5E38 506B 55E1
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f7c545909e726cf229e44b6c19ff43c38a7253715f5d0681198c38c6ad42d1bd0a",
+      "fingerprint": "6c56417ae2516af457ba704d849d5e38506b55e1",
+      "host": "keybase.io",
+      "key_id": "849d5e38506b55e1",
+      "kid": "0101753bb88f267838382a80d2b60fe60dcf54074158483212b39f508a083a07d4260a",
+      "uid": "4b56d6bc657961675fade974cd6fe119",
+      "username": "polarizedions"
+    },
+    "merkle_root": {
+      "ctime": 1551952512,
+      "hash_meta": "ba6c931a7dbf754f3fb0384e60b08b2b91172c5c88c5cf53feaa321b6762585c",
+      "seqno": 4893176
+    },
+    "revoke": {
+      "sig_ids": [
+        "eab85eac1b2e5e55c14bb9c46d3e7fb762f4ddfb1821c6837a6dea3422d13d220f"
+      ]
+    },
+    "service": {
+      "hostname": "polarizedions.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1551952525,
+  "expire_in": 157680000,
+  "prev": "cb468a2788ffe47be2ec993a2b814b78e2bbe561cc3468b6926ac2a85e7df77b",
+  "seqno": 37,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owFtU31oVlUYf9/cag61QWUwXB83lYQx7/k+9yVSSyQzow9U3Kq387nd3nf3vt57
+97rNBllGjRqNqD+CbGmjCAoxoj/EtGIIa1AE1WQEkaxmQgNpZBFK545GEN4D93Kf
+83t+z+/5neeMrlxWaCoeOvwEf6iy66fi1K+y8NgzFw4f8GSsB7zSAa9iFj+mqk2a
+lSuh9kqeD6BvmSKYBH5gGKTKQhgYjCVVILAWI4W4YJAgBogl2qccgIC7oKJCY6iB
+1L7w2j0bRt0mqSVhlDlaqgjFgAkDCaDCYsKkYD7WHAeaGMSJTyUhBrjEnjjNM5w4
+KVLTEcYu5n7Ki/Kugl/S7QNGkJScW0gZR25BwX0NJfWtob5WlmCfYUA45ggCKFFg
+ic+Fz5HwmZNOF3X3LdJhSaimUlHCAgooI1ZoEzCsNLXGNZwDU5NEotc4dC2uiiQc
+NDqMo9Qbavd6TVKpmnISx1nusMrCHAcIAQFxDkDXpUh7yr0mEy5dCqoCBATT0jKC
+LbLSRxw70dLnEsoAAAYVUZy7lyXIGiFcB5IyCgknyolJzb4o9kqYOx5GnYLE1OOK
+yYunYbfzLvVKXZ8d9IyQnBihgISGGEIUwFIGClONDLPSEVqstZWAQ6AoR0xQbQTC
+0B0s0tDNhvf4UF4uqYdqkT4/rqvZ0BGZzAmrJXEWq7jqtnuyrJaWcnuygVqO329k
++V+msgwj7SbGZdRNkjoCZ5dD/s85SNo9018LE1MOcwRhlPvuyeuYuqNUElMuIHNT
+YA1m0kCjggAJKLnrlHEDpTSEAqWQA0oaQCqUmxNimLaMyf+sRMzpFN2O0xkYiawv
+Md5Q83ARNRSKTYW21bc3VHdvGTz38FMLe07Udi7dssZr8itWaF7eshQ51nbdlfXH
+xsa+mvRGzKX9C8df3jv3yJq3Rzr7L34+1djEJ2bOkxOR6Lnxmwuv3Td+6Psv7m2+
+8mk6MrRw64aBHy8ePDM1vTbc2cqVuOts/dEdsy92vNG/+dz02pZN28bvuTTMv149
+d9b/eLk6uqHt3Wz0we3DIzuOl1o+2vrB/euiO25ZFe4+M9tYPfr6c6suv9PT+lvU
+tIeRudsu3xDUW3npl8GusW37dq0pdhYmZh64Gd/994qTR+fEfKXzSN+y6/e+MGF+
+WPHltx/eOb91pW0YfHP8yDQ6NX9q4+TPf20fnX3ryY3FyeLTm2eu/bNjy/Prviv+
+/sqmyZfe/4OdrL1XoJ88e9P59bPjXfNdr54+Df4B
+=6JLt
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/polarizedions
+
+==================================================================

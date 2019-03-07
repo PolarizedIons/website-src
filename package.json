@@ -14,8 +14,8 @@
   "license": "MIT",
   "name": "polarizedions-website",
   "scripts": {
-    "build": "NODE_ENV=production rimraf ./dist && parcel build src/index.html",
-    "dev": "parcel serve src/index.html"
+    "build": "NODE_ENV=production rimraf ./dist && cpy ./src/public ./dist && parcel build src/index.html",
+    "dev": "cpy ./src/public ./dist && parcel serve src/index.html"
   },
   "version": "0.0.1",
   "repository": {
@@ -23,6 +23,7 @@
     "url": "https://github.com/polarizedions/website-src.git"
   },
   "dependencies": {
+    "cpy-cli": "^2.0.0",
     "normalize.css": "^8.0.1",
     "parcel": "^1.11.0",
     "rimraf": "^2.6.3",
