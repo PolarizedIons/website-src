@@ -40,7 +40,7 @@ export default {
                 },
                 {
                     q: 'What did you use to make this website?',
-                    a: 'A computer :^) I used Visual Studio Code, aswell as Firefox\'s developer console. :d VueJS mostly, with some TypeScript and SCSS thrown in.',
+                    a: 'A computer :^) I used Visual Studio Code, aswell as Firefox\'s developer console. :d VueJS mostly',
                 },
                 {
                     q: 'Why the name PolarizedIons?',
