@@ -48,6 +48,7 @@ export default {
     img {
         border-radius: 5%;
         border: 10px solid rgba(0, 0, 0, 0.2);
+        width: 400px;
     }
 
     h2 {
@@ -68,5 +69,18 @@ export default {
     p {
         font-size: 1.5rem;
         color: #aaa;
+    }
+
+    @media (max-width: 1200px) {
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .intro {
+            flex-direction: column;
+        }
     }
 </style>

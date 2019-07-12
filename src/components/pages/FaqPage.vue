@@ -40,7 +40,7 @@ export default {
                 },
                 {
                     q: 'What did you use to make this website?',
-                    a: 'A computer :^) I used Visual Studio Code, aswell as Firefox\'s developer console. :d VueJS mostly, with some TypeScript and SCSS thrown in.',
+                    a: 'A computer :^) I used Visual Studio Code, aswell as Firefox\'s developer console. :d VueJS mostly',
                 },
                 {
                     q: 'Why the name PolarizedIons?',
@@ -121,5 +121,23 @@ export default {
         background: #00BCD4;
         border-bottom-right-radius: 5px;
         text-align: right;
+    }
+
+    @media (max-width: 1000px) {
+        .qna-container {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .qna-container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .qna-container {
+            grid-template-columns: 1fr;
+        }
     }
 </style>

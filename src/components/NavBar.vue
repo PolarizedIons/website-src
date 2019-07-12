@@ -28,7 +28,7 @@ export default {
         font-family: 'Montserrat', sans-serif;
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
         height: calc(var(--padding-vert) * 2 + var(--font-size));
         margin-bottom: 20px;
     }
