@@ -4,9 +4,40 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>PolarizedIons.net</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet" async> 
+    <style>
+      body {
+        background: #263238;
+      }
+      .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 50%;
+        animation: loader-animation 1s ease-in infinite;
+      }
+
+      @keyframes loader-animation {
+        0% {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        80% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          width: 50px;
+          height: 50px;
+          margin-top: -25px;
+          margin-left: -25px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app"><div class="loader"></div></div>
   </body>
 </html>
