@@ -122,4 +122,22 @@ export default {
         border-bottom-right-radius: 5px;
         text-align: right;
     }
+
+    @media (max-width: 1000px) {
+        .qna-container {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .qna-container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .qna-container {
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
