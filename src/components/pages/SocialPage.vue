@@ -5,7 +5,7 @@
                 <img :src="images[social.id]" />
                 <div class="info">
                     <h2>{{social.name}}</h2>
-                    <p v-if='social.meta'>{{social.meta}}</p>
+                    <span class="meta" v-if='social.meta' :data-content="social.meta"></span>
                 </div>
             </a>
         </div>
@@ -96,34 +96,66 @@ export default {
     section {
         width: 70%;
         margin: 50px auto 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        flex-wrap: wrap;
     }
 
-    .social {
-        margin: 25px;
-        background-repeat: no-repeat !important;
-        background-size: contain !important;
-        background-position: center !important;
-        position: relative;
-    }
+    section {
+  display: flex;
+}
 
-    img {
-        background: #607D8B;
-        height: 250px;
-        padding: 25px;
-        width: calc(100% - 25px);
-    }
+.social {
+  margin: 25px;
+  background: #607D8B;
+  padding: 5px;
+  position: relative;
+}
 
-    .info {
-        position: absolute;
-        bottom: 0;
-        padding: 10px 15px;
-        background: rgba(0, 0, 0, 0.5);
-        width: 100%
-    }
+.social::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-bottom: 15px solid #4527A0;
+    border-right: 15px solid transparent;
 
-    a {
-        color: #eee;
-    }
+    position: absolute;
+    z-index: 5;
+    bottom: 29px;
+    right: -15px;
+}
+
+.social:hover .meta::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #9E9E9E;
+    transform: rotate(45deg) translate(50%, -100%);
+    z-index: 50;
+}
+
+.social:hover .meta::after {
+    content: attr(data-content);
+    position: absolute;
+    padding: 10px 15px;
+    background: #9E9E9E;
+    color: black;
+    z-index: 50;
+}
+
+img {
+  width: 128px;
+}
+
+.info {
+  position: absolute;
+  left: -15px;
+  bottom: -40px;
+  background: #673AB7;
+  width: calc(100%);
+  padding: 0 15px;
+}
+
+a {
+  color: #fff;
+}
 </style>
