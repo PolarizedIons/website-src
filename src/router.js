@@ -4,6 +4,7 @@ import HomePage from '@/components/pages/HomePage';
 import FaqPage from '@/components/pages/FaqPage';
 import SocialPage from '@/components/pages/SocialPage';
 import SkillPage from '@/components/pages/SkillPage';
+import NotFoundPage from '@/components/pages/NotFoundPage';
 
 Vue.use(Router);
 
@@ -38,6 +39,15 @@ export const routes = [
         component: SkillPage,
         meta: {
             title: 'Skills',
+        },
+    },
+    {
+        path: '*',
+        name: 'NotFoundPage',
+        component: NotFoundPage,
+        meta: {
+            title: '404 - Not Found',
+            hidden: true,
         },
     },
 ];

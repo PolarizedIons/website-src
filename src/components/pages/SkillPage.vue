@@ -7,7 +7,7 @@
                     <v-jsoneditor v-model="languages" :plus="false" />
                 </div>
                 <div class="col chart">
-                    <bar-chart class="test" :data="languages" height="200px" />
+                    <bar-chart class="test" :data="languages" :height="200" />
                 </div>
             </div>
         </section>
@@ -15,7 +15,7 @@
             <h2>My Day</h2>
             <div class="columns">
                 <div class="col chart">
-                    <doughnut-chart class="test" :data="day" height="200px" />
+                    <doughnut-chart class="test" :data="day" :height="200" />
                 </div>
                 <div class='col data'>
                     <v-jsoneditor v-model="day" :plus="false" />

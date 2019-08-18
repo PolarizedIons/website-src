@@ -100,62 +100,62 @@ export default {
     }
 
     section {
-  display: flex;
-}
+        display: flex;
+    }
 
-.social {
-  margin: 25px;
-  background: #607D8B;
-  padding: 5px;
-  position: relative;
-}
+    .social {
+        margin: 25px;
+        background: #607D8B;
+        padding: 5px;
+        position: relative;
+    }
 
-.social::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-bottom: 15px solid #4527A0;
-    border-right: 15px solid transparent;
+    .social::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-bottom: 15px solid #4527A0;
+        border-right: 15px solid transparent;
 
-    position: absolute;
-    z-index: 5;
-    bottom: 29px;
-    right: -15px;
-}
+        position: absolute;
+        z-index: 5;
+        bottom: 29px;
+        right: -15px;
+    }
 
-.social:hover .meta::before {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #9E9E9E;
-    transform: rotate(45deg) translate(50%, -100%);
-    z-index: 50;
-}
+    .social:hover .meta::before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #9E9E9E;
+        transform: rotate(45deg) translate(50%, -100%);
+        z-index: 50;
+    }
 
-.social:hover .meta::after {
-    content: attr(data-content);
-    position: absolute;
-    padding: 10px 15px;
-    background: #9E9E9E;
-    color: black;
-    z-index: 50;
-}
+    .social:hover .meta::after {
+        content: attr(data-content);
+        position: absolute;
+        padding: 10px 15px;
+        background: #9E9E9E;
+        color: black;
+        z-index: 50;
+    }
 
-img {
-  width: 128px;
-}
+    img {
+        width: 128px;
+    }
 
-.info {
-  position: absolute;
-  left: -15px;
-  bottom: -40px;
-  background: #673AB7;
-  width: calc(100%);
-  padding: 0 15px;
-}
+    .info {
+        position: absolute;
+        left: -15px;
+        bottom: -40px;
+        background: #673AB7;
+        width: calc(100%);
+        padding: 0 15px;
+    }
 
-a {
-  color: #fff;
-}
+    a {
+        color: #fff;
+    }
 </style>

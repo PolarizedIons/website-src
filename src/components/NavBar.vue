@@ -13,7 +13,7 @@ export default {
     name: 'NavBar',
     computed: {
         links() {
-            return routes.map(el => [el.meta.title, el.name]);
+            return routes.filter(el => !el.meta.hidden).map(el => [el.meta.title, el.name]);
         },
     },
 };

@@ -26,7 +26,7 @@ export default {
     },
     computed: {
         welcomeMessage() {
-            return this.welcomeMessages[Math.floor(Math.random() * this.messages.length)];
+            return this.welcomeMessages[Math.floor(Math.random() * this.welcomeMessages.length)];
         },
     },
 };
