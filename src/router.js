@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import HomePage from '@/components/pages/HomePage';
 import FaqPage from '@/components/pages/FaqPage';
 import SocialPage from '@/components/pages/SocialPage';
+import SkillPage from '@/components/pages/SkillPage';
 
 Vue.use(Router);
 
@@ -29,6 +30,14 @@ export const routes = [
         component: SocialPage,
         meta: {
             title: 'Social',
+        },
+    },
+    {
+        path: '/skills',
+        name: 'SkillPage',
+        component: SkillPage,
+        meta: {
+            title: 'Skills',
         },
     },
 ];

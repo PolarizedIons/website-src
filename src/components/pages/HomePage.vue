@@ -12,11 +12,12 @@
 </template>
 
 <script>
+
 export default {
     name: 'HomePage',
     data() {
         return {
-            messages: [
+            welcomeMessages: [
                 'Welcome to my little site!',
                 'Well hello there :)',
                 '"What is better? To be born good or to overcome your evil nature through great effort?" ― Paarthurnax, Skyrim',
@@ -25,7 +26,7 @@ export default {
     },
     computed: {
         welcomeMessage() {
-            return this.messages[Math.floor(Math.random() * this.messages.length)];
+            return this.welcomeMessages[Math.floor(Math.random() * this.messages.length)];
         },
     },
 };
