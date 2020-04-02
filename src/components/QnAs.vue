@@ -3,7 +3,7 @@
     <h2>FAQ</h2>
     <div class="qna" v-for="(qna, i) of qnas" :key="i">
       <span class="q">{{ qna.q }}</span>
-      <br/>
+      <br />
       <span class="a">{{ qna.a }}</span>
     </div>
   </section>

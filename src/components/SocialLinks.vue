@@ -2,7 +2,13 @@
   <section id="social-links">
     <h2>SocialLinks</h2>
     <div class="links">
-      <component :is="social.link ? 'a' : 'span'" class="social" v-for="(social, i) of socials" :key="i" :href="social.link || '#'">
+      <component
+        :is="social.link ? 'a' : 'span'"
+        class="social"
+        v-for="(social, i) of socials"
+        :key="i"
+        :href="social.link || '#'"
+      >
         <img :src="social.image" class="logo" />
         <div class="details">
           <h3 class="name">{{ social.name }}</h3>
@@ -102,7 +108,7 @@ h2 {
 }
 
 .links .social::before {
-  content: '';
+  content: "";
   background: white;
   position: absolute;
   top: 100%;
@@ -128,5 +134,4 @@ h2 {
   z-index: 1;
   position: relative;
 }
-
 </style>

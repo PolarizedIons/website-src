@@ -4,22 +4,25 @@
       <nav-bar></nav-bar>
     </aside>
     <main v-scroll-spy>
-      <component :is="compName" v-for="compName of Object.values($root.sections)" :key="compName"></component>
+      <component
+        :is="compName"
+        v-for="compName of Object.values($root.sections)"
+        :key="compName"
+      ></component>
     </main>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import NavBar from '../components/NavBar.vue';
+import NavBar from "../components/NavBar.vue";
 
 @Component({
   components: {
-    NavBar,
+    NavBar
   }
 })
-export default class Home extends Vue {
-}
+export default class Home extends Vue {}
 </script>
 
 <style scoped>
@@ -31,7 +34,7 @@ aside {
   width: var(--sidebar-width);
   background: var(--primary-background);
   height: 100vh;
-  position:fixed;
+  position: fixed;
 }
 
 main {
@@ -44,7 +47,7 @@ main {
   }
 
   aside {
-    display: none ;
+    display: none;
   }
 
   main {

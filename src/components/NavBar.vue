@@ -1,37 +1,40 @@
 <template>
-    <section>
-        <h1>PolarizedIons.net</h1>
-        <nav v-scroll-spy-active v-scroll-spy-link>
-                <div class="link" v-for="linkName of Object.keys($root.sections)" :key="linkName">
-                    <a>{{linkName}}</a>
-                </div>
-        </nav>
-    </section>
+  <section>
+    <h1>PolarizedIons.net</h1>
+    <nav v-scroll-spy-active v-scroll-spy-link>
+      <div
+        class="link"
+        v-for="linkName of Object.keys($root.sections)"
+        :key="linkName"
+      >
+        <a>{{ linkName }}</a>
+      </div>
+    </nav>
+  </section>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class NavBar extends Vue {
-}
+export default class NavBar extends Vue {}
 </script>
 
 <style scoped>
 h1 {
-    text-align: center;
-    margin: 2rem 0;
-    font-size: 1.5rem;
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.5rem;
 }
 
 .link {
-    position: relative;
-    cursor: pointer;
-    padding: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  padding: 0.5rem;
 }
 
 .link::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   background: var(--primary);
@@ -44,7 +47,7 @@ h1 {
 }
 
 .link.active {
-    color: white;
+  color: white;
 }
 
 .link.active::before {
@@ -52,6 +55,6 @@ h1 {
 }
 
 .link a {
-    display: block;
+  display: block;
 }
 </style>
