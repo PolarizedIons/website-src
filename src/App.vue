@@ -20,6 +20,31 @@
   color: var(--secondary);
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 html,
 body {
   margin: 0;
@@ -31,6 +56,14 @@ body {
   box-sizing: border-box;
   color: var(--secondary);
   font-size: var(--base-font-size);
+  /* TODO: figure out why there is x overflow in the first place */
+  overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 h1,
@@ -41,8 +74,6 @@ h5,
 h6 {
   font-weight: 700;
   display: block;
-  margin: 0;
-  padding: 0;
   color: var(--primary);
 }
 
