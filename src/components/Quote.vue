@@ -1,5 +1,5 @@
 <template>
-  <span class="quote">{{ quote }}</span>
+  <span class="quote">🎵 {{ quote }}</span>
 </template>
 
 <script lang="ts">

@@ -10,16 +10,19 @@
         :key="compName"
       ></component>
     </main>
+    <my-footer></my-footer>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import NavBar from "../components/NavBar.vue";
+import Footer from "../components/Footer.vue";
 
 @Component({
   components: {
-    NavBar
+    NavBar,
+    MyFooter: Footer
   }
 })
 export default class Home extends Vue {}
