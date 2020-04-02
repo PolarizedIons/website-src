@@ -25,4 +25,14 @@ footer {
   background: var(--primary-background);
   padding: 1rem 2rem;
 }
+
+@media (max-width: 670px) {
+  footer {
+    margin-left: 0;
+  }
+
+  footer > * {
+    width: 50%;
+  }
+}
 </style>
