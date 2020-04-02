@@ -1,25 +1,23 @@
 <template>
-  <div id="social">
-    <div class="header">
-      <h1>Social Stuff</h1>
-    </div>
-    <div class="main">
-      <a class="social" v-for="(social, i) of socials" :key="i" :href="social.link || '#'">
+  <section id="social-links">
+    <h2>SocialLinks</h2>
+    <div class="links">
+      <component :is="social.link ? 'a' : 'span'" class="social" v-for="(social, i) of socials" :key="i" :href="social.link || '#'">
         <img :src="social.image" class="logo" />
         <div class="details">
           <h3 class="name">{{ social.name }}</h3>
           <span class="username">{{ social.username }}</span>
         </div>
-      </a>
+      </component>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class Social extends Vue {
+export default class SocialLinks extends Vue {
   socials = [
     {
       name: "Github",
@@ -68,55 +66,67 @@ export default class Social extends Vue {
 </script>
 
 <style scoped>
-#social {
-  padding: 1.2rem;
+#social-links {
+  padding: 1rem 3rem;
 }
 
-.header,
-.main {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.header {
+h2 {
   text-align: center;
-  background: var(--purple);
-  margin-bottom: 1.2rem;
-  padding: 0.6rem 0;
+  margin: 1rem 0;
 }
 
-.main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1.2rem;
-}
-
-.social {
-  background: var(--blue);
-  transition: background-color linear 0.2s;
+.links {
   display: flex;
-  text-decoration: none;
-}
-
-.social:hover {
-  background: var(--blue-dark);
-}
-
-.social .logo {
-  width: 128px;
-  background: #fff;
-}
-
-.social .details {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
   justify-content: center;
 }
 
-.social .name,
-.social .username {
+.links .social {
+  position: relative;
+  padding: 1rem;
+  margin: 1rem 1.5rem;
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
-  color: #fff;
 }
+
+.links .social:hover {
+  color: black;
+}
+
+.links .social::before {
+  content: '';
+  background: white;
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  transition: top 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.links .social:hover::before {
+  top: 0;
+}
+
+.links .social img {
+  max-width: 128px;
+  position: relative;
+  z-index: 1;
+  padding: 1rem 0;
+}
+
+.links .social .details {
+  z-index: 1;
+  position: relative;
+}
+
 </style>

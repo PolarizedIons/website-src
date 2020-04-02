@@ -1,22 +1,19 @@
 <template>
-  <div id="about">
-    <div class="header">
-      <h1>About Me</h1>
+  <section id="qnas">
+    <h2>FAQ</h2>
+    <div class="qna" v-for="(qna, i) of qnas" :key="i">
+      <span class="q">{{ qna.q }}</span>
+      <br/>
+      <span class="a">{{ qna.a }}</span>
     </div>
-    <div class="main">
-      <div class="qna" v-for="(qna, i) of qnas" :key="i">
-        <span class="q">{{ qna.q }}</span>
-        <span class="a">{{ qna.a }}</span>
-      </div>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class About extends Vue {
+export default class QnAs extends Vue {
   qnas = [
     {
       q: "What is your real name?",
@@ -64,47 +61,35 @@ export default class About extends Vue {
 </script>
 
 <style scoped>
-#about {
-  padding: 1.2rem;
+#qnas {
+  padding: 1rem 3rem;
 }
 
-.header,
-.main {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.header {
+h2 {
   text-align: center;
-  background: var(--purple);
-  margin-bottom: 1.2rem;
-  padding: 0.6rem 0;
-}
-
-.main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 1.2rem;
+  margin: 1rem 0;
 }
 
 .qna {
-  background: #fff;
+  margin: 1rem 0;
 }
 
 .qna .q,
 .qna .a {
-  padding: 1.2rem 0.6rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
 }
 
 .qna .q {
-  display: block;
-  background: var(--blue);
-  text-align: center;
-  font-weight: bold;
-  color: #fff;
+  background: var(--primary);
+  border-bottom-left-radius: 5px;
 }
 
 .qna .a {
-  display: block;
+  margin-top: 0.5rem;
+  margin-left: 3rem;
+  background: var(--highlight);
+  border-bottom-right-radius: 5px;
 }
 </style>

@@ -6,17 +6,18 @@
 
 <style>
 :root {
-  --black: #0a0e0c;
-  --navy: #202c39;
-  --purple: #645986;
-  --blue: #1c7ca1;
-  --blue-dark: #146788;
-  --green: #5c946e;
+  --background: #2e2e2e;
+  --primary-background: #0f0f0f;
+  --primary: #862fc0;
+  --secondary: #d6d6d6;
+  --highlight: #2841cf;
+  --sidebar-width: 400px;
+  --base-font-size: 16px;
 }
 
 ::selection {
-  color: var(--green);
-  background: var(--purple);
+  background: var(--primary);
+  color: var(--secondary);
 }
 
 html,
@@ -27,9 +28,9 @@ body {
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  background: var(--navy);
-  color: var(--black);
   box-sizing: border-box;
+  color: var(--secondary);
+  font-size: var(--base-font-size);
 }
 
 h1,
@@ -42,10 +43,42 @@ h6 {
   display: block;
   margin: 0;
   padding: 0;
+  color: var(--primary);
+}
+
+h1 {
+  font-size: calc(var(--base-font-size) * 2);
+}
+
+h2 {
+  font-size: calc(var(--base-font-size) * 1.5);
+}
+
+h3 {
+  font-size: calc(var(--base-font-size) * 1.17);
+}
+
+h4 {
+  font-size: calc(var(--base-font-size) * 1);
+}
+
+h5 {
+  font-size: calc(var(--base-font-size) * 0.83);
+}
+
+h6 {
+  font-size: calc(var(--base-font-size) * 0.67);
 }
 
 #app {
   min-width: 100vw;
   min-height: 100vh;
+  background: var(--background);
+}
+
+@media (max-width: 670px) {
+  :root {
+    --base-font-size: 14px;
+  }
 }
 </style>
