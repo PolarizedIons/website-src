@@ -26,9 +26,6 @@ export default {
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-/* purgecss end ignore */
-
-@tailwind utilities;
 
 .slide-left-enter-active,
 .slide-left-leave-active {
@@ -47,4 +44,8 @@ export default {
     opacity: 0;
     transform: scale(0.75);
 }
+
+/* purgecss end ignore */
+
+@tailwind utilities;
 </style>
