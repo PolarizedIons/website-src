@@ -1,6 +1,11 @@
 <template>
     <div class="p-4">
-        <img src="https://twitter-avatar.now.sh/polarizedions" class="rounded-full m-4 shadow-lg mx-auto" />
+        <img
+            src="https://twitter-avatar.now.sh/polarizedions"
+            class="rounded-full m-4 shadow-lg mx-auto border-4 border-black bg-gray-900"
+            width="200"
+            height="200"
+        />
         <div class="h-full flex flex-wrap justify-center items-center lg:w-3/4 mx-auto">
             <a
                 v-for="(social, i) of socials"
