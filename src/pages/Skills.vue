@@ -1,9 +1,9 @@
 <template>
-    <div class="flex flex-wrap w-10/12 mx-auto justify-center">
+    <div class="flex flex-wrap lg:w-4/5 mx-auto justify-center">
         <div
             v-for="skill of skillSet"
             :key="`skill-${skill.name}`"
-            class="bg-gray-800 flex items-center justify-center p-4 m-4 w-full lg:w-1/4 shadow-2xl"
+            class="bg-gray-800 flex items-center justify-center p-4 m-4 w-1/2 md:w-1/3 lg:w-1/4 shadow-2xl"
         >
             {{ skill.name }}
         </div>

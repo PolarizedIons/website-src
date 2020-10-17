@@ -1,8 +1,12 @@
 <template>
-    <div class="p-8 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+    <div class="p-8 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 lg:w-4/5 mx-auto">
         <div v-for="(question, i) in questions" :key="`question-${i}`" class="m-3">
             <div class="text-xl">{{ question.q }}</div>
             <div class="border-green-600 border-l-4 pl-3">{{ question.a }}</div>
+        </div>
+        <div class="m-3">
+            <div class="text-xl">What is a random fact about you?</div>
+            <a @click.prevent="selectRandomFact" href="#" class="border-green-600 border-l-4 pl-3">{{ randomFact }}</a>
         </div>
     </div>
 </template>
@@ -36,22 +40,45 @@ export default {
                 },
                 {
                     q: 'What languages do you know?',
-                    a: 'Afrikaans, English, C#, VueJS, Java, JavaScript, and a little bit of php, python and bash',
+                    a: 'Afrikaans, English, C#, VueJS, Java, JavaScript, C#, and a little bit of php, python and bash',
                 },
                 {
                     q: 'Favourite game?',
                     a:
-                        'Probably either Minecraft, Skyrim, or Portal 2. Oblivion, Celeste and Half Life are cool too though!',
+                        'Probably either Minecraft, Skyrim, or Portal 2. Oblivion, Celeste and the Half Life series are cool too though!',
                 },
                 {
                     q: 'Favourite music artist?',
-                    a: 'Hard question! Usually something by dodie, Troye Sivan, or 99lives',
+                    a: 'Hard question! Usually something by dodie, Troye Sivan, or ninty9lives',
                 },
                 {
                     q: 'What did you make this website with?',
-                    a: 'VueJS, TypeScript, TailwindCSS, VueWordCloud, hosted on Netlify',
+                    a: 'VueJS, TailwindCSS, VueWordCloud, hosted on Netlify',
+                },
+                {
+                    q: 'What is your job/occupation?',
+                    a: "I'm currently a fulltime, fullstack software developer at a company in South Africa",
                 },
             ],
+            facts: [
+                "I have bad social anxiety - if I don't answer your phone call, this is why!",
+                'I love hate pop music',
+                'I can listen to almost any type of music, except rap/hard metal',
+                'I love pumpkin soup',
+                'Sometimes I listen to music all the time, sometimes I go weeks without listening to one song',
+                "Sometimes on a whim, I'll rearange my bedroom completely",
+                "I never studied at a universety, though people still think I'm good at what I do",
+                "My cat's name is Zoey",
+                'I stole this random-quote idea from my friend Ellpeck',
+                "I almost never finish projects, but I'm pretty proud of those I do finish",
+                "I've never left the country",
+                'I have more international friends, than local ones',
+                'I suck at public speaking',
+                'According to 16personalities, I am an ISFP',
+                'I have a discord snapback, whose import-costs, cost more than the actual hat',
+                "I don't like scented candles",
+            ],
+            randomFact: '',
         };
     },
     methods: {
@@ -60,6 +87,12 @@ export default {
             let ageDate = new Date(ageDifMs);
             return Math.abs(ageDate.getUTCFullYear() - 1970);
         },
+        selectRandomFact() {
+            this.randomFact = this.facts[Math.floor(Math.random() * this.facts.length)];
+        },
+    },
+    mounted() {
+        this.selectRandomFact();
     },
 };
 </script>
