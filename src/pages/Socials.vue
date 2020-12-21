@@ -1,7 +1,13 @@
 <template>
     <div class="p-4">
-        <img
+        <!-- <img
             src="https://twitter-avatar.now.sh/polarizedions"
+            class="rounded-full m-4 shadow-lg mx-auto border-4 border-black bg-gray-900"
+            width="200"
+            height="200"
+        /> -->
+        <img
+            :src="require('../assets/me.jpg')"
             class="rounded-full m-4 shadow-lg mx-auto border-4 border-black bg-gray-900"
             width="200"
             height="200"
