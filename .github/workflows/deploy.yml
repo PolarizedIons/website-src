@@ -1,10 +1,8 @@
-
 name: CI
 
 on:
   push:
     branches: [ main ]
-
 
 jobs:
   build:
@@ -14,19 +12,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-    - name: Use Node.js 12.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
 
-    - name: Install Dependencies
-      run: yarn install
+      - name: Install Dependencies
+        run: yarn install
 
-    - name: Build
-      run: yarn build --prod
+      - name: Build
+        run: yarn build --prod
 
-    - name: Deploy to CF
-      uses: cloudflare/wrangler-action@1.2.0
-      with:
-        apiToken: ${{ secrets.CF_API_TOKEN }}
-        environment: 'production'
+      - name: Deploy to CF
+        uses: cloudflare/wrangler-action@1.2.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          environment: 'production'
