@@ -40,7 +40,7 @@ export default {
                 },
                 {
                     q: 'What languages do you know?',
-                    a: 'Afrikaans, English, C#, VueJS, Java, JavaScript, C#, and a little bit of php, python and bash',
+                    a: 'Afrikaans, English, with a few programming languages thown in as well',
                 },
                 {
                     q: 'Favourite game?',
@@ -48,12 +48,12 @@ export default {
                         'Probably either Minecraft, Skyrim, or Portal 2. Oblivion, Celeste and the Half Life series are cool too though!',
                 },
                 {
-                    q: 'Favourite music artist?',
-                    a: 'Hard question! Usually something by dodie, Troye Sivan, or ninty9lives',
+                    q: 'Favourite type of music?',
+                    a: 'Hard question! I go though phases where I listen to the same artist a lot, and something nothing at all.',
                 },
                 {
                     q: 'What did you make this website with?',
-                    a: 'VueJS, TailwindCSS, VueWordCloud, hosted on Netlify',
+                    a: 'VueJS 3, TailwindCSS, hosted on Cloudflare',
                 },
                 {
                     q: 'What is your job/occupation?',
