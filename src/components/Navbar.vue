@@ -1,5 +1,8 @@
 <template>
     <section class="fixed h-32 w-full bottom-0 bg-gray-900 shadow-2x">
+        <section class="absolute bottom-0 left-0 p-4">
+            <img src="/logo.png" alt="Logo" class="w-16 h-16" />
+        </section>
         <nav>
             <ul class="flex justify-center">
                 <li v-for="(link, i) of links" :key="`nav-link-${i}`" class="py-4">
