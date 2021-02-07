@@ -6,5 +6,5 @@ route = "polarizedions.net/*"
 zone_id = "b293c82295ca531cb2104565c40686d2"
 
 [site]
-bucket = "./dist"
+bucket = "./build"
 entry-point = "workers-site"
