@@ -37,7 +37,7 @@ const questions = [
   },
   {
     q: 'Favourite type of music?',
-    a: 'Hard question! I go through phases where I listen to the same artist a lot, and something nothing at all.',
+    a: 'Hard question! I go through phases where I listen to the same artist a lot, and sometimes nothing at all.',
   },
   {
     q: 'What did you make this website with?',
