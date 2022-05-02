@@ -1,46 +1,27 @@
-import { Route, Switch, useLocation } from 'react-router-dom';
-import { animated, useTransition } from 'react-spring';
-import { NavBar } from './components/NavBar';
-import { AboutPage } from './components/pages/AboutPage';
-import { LinksPage } from './components/pages/LinksPage';
-import { SkillsPage } from './components/pages/SkillsPage';
+import { FC } from 'react';
+import { Button } from './components/Button';
+import { Facts } from './components/Facts';
+import { Heading } from './components/Heading';
+import { Me } from './components/Me';
+import { Underline } from './components/Underline';
 
-export const App = () => {
-  const location = useLocation();
-
-  const transitions = useTransition(location, (loc) => loc.pathname, {
-    from: {
-      transform: 'rotateX(-90deg)',
-      position: 'absolute',
-      transformOrigin: 'top',
-      overflow: 'hidden',
-    },
-    enter: { transform: 'rotateX(0)', opacity: 1, overflow: 'auto' },
-    leave: {
-      transform: 'rotateX(-90deg)', transformOrigin: 'bottom', opacity: 0, overflow: 'hidden',
-    },
-  });
-
-  return (
-    <div className="bg-dark text-white w-full min-h-screen font-roboto flex">
-      <NavBar />
-      <div className="relative flex-grow">
-        {transitions.map(({ item, props, key }) => (
-          <animated.div key={key} style={props} className="origin-top w-full bg-dark">
-            <Switch location={item}>
-              <Route path="/" exact>
-                <AboutPage />
-              </Route>
-              <Route path="/links" exact>
-                <LinksPage />
-              </Route>
-              <Route path="/skills" exact>
-                <SkillsPage />
-              </Route>
-            </Switch>
-          </animated.div>
-        ))}
+export const App: FC = () => (
+  <div className="w-full min-h-screen bg-background-purple text-white font-roboto">
+    <div className="flex flex-col items-center py-8">
+      <div className="flex gap-6 items-center">
+        <Me />
+        <div>
+          <Heading>PolarizedIons</Heading>
+          <Underline />
+          <div className="py-4 flex flex-wrap gap-4">
+            <Button direction="down" href="https://github.com/PolarizedIons">Github</Button>
+            <Button direction="down" href="https://twitter.com/PolarizedIons">Twitter</Button>
+            <Button direction="down" href="mailto:me@polarizedions.net">Email</Button>
+          </div>
+        </div>
       </div>
     </div>
-  );
-};
+
+    <Facts />
+  </div>
+);

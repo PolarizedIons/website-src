@@ -1,6 +1,11 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
-export const Heading: FC = (props) => {
+type Props = {
+    children: ReactNode,
+}
+
+export const Heading: FC<Props> = (props) => {
   const { children } = props;
-  return <div className="text-2xl lg:text-6xl">{children}</div>;
+
+  return <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-thin">{children}</h1>;
 };

@@ -70,22 +70,26 @@ const facts = [
 
 const getRandomFact = () => facts[Math.floor(Math.random() * facts.length)];
 
-export const QnA: FC = () => {
+export const Facts: FC = () => {
   const [randomFact, setRandomFact] = useState(getRandomFact());
 
   const newRandomFact = () => setRandomFact(getRandomFact());
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-wrap justify-center gap-6 p-6">
       {questions.map((question) => (
-        <div key={question.q}>
-          <div className="font-bold">{question.q}</div>
-          <div>{question.a}</div>
+        <div key={question.q} className="bg-gradient-to-tr from-accent-1 to-accent-2 p-1 rounded-full">
+          <div className="w-96 bg-background-purple rounded-full p-6 h-full text-center">
+            <div className="font-bold">{question.q}</div>
+            <div className="font-thin">{question.a}</div>
+          </div>
         </div>
       ))}
-      <div onClick={newRandomFact} role="button" tabIndex={-1} onKeyPress={newRandomFact}>
-        <div className="font-bold">What is a random fact about you?</div>
-        <div>{randomFact}</div>
+      <div className="bg-gradient-to-tr from-accent-1 to-accent-2 p-1 rounded-full">
+        <div onClick={newRandomFact} role="button" tabIndex={-1} onKeyPress={newRandomFact} className="w-96 bg-background-purple rounded-full p-6 h-full text-center">
+          <div className="font-bold">What is a random fact about you?</div>
+          <div className="font-thin">{randomFact}</div>
+        </div>
       </div>
     </div>
   );

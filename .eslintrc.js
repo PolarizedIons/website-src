@@ -52,5 +52,10 @@ module.exports = {
       code: 120, tabWidth: 2, ignoreStrings: true, ignoreTemplateLiterals: true,
     }],
     'react/jsx-props-no-spreading': 'off',
+    'react/function-component-definition': [2, {
+      namedComponents: 'arrow-function',
+      unnamedComponents: 'arrow-function',
+    }],
+    'react/require-default-props': 'off',
   },
 };
