@@ -41,7 +41,7 @@ const questions = [
   },
   {
     q: 'What did you make this website with?',
-    a: 'VueJS 3, TailwindCSS, hosted on Cloudflare.',
+    a: 'React, TailwindCSS, hosted on Cloudflare.',
   },
   {
     q: 'What is your job/occupation?',
