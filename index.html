@@ -2,18 +2,105 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PolarizedIons</title>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>PolarizedIons.net</title>
 </head>
 
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+  <header>
+    <h1>PolarizedIons</h1>
+    <img src="./img/me.jpg" alt="profile picture" />
+  </header>
+
+  <section>
+    <h2 style="--section-heading-bg: var(--background-accent-red);">Socials</h2>
+
+    <ul>
+      <li><a rel="me" href="https://github.com/PolarizedIons">Github</a></li>
+      <li><a rel="me" href="https://social.ions.sh/@polarized">Mastodon</a></li>
+      <li><a rel="me" href="mailto:me@polarizedions.net">Email</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 style="--section-heading-bg: var(--background-accent-purple);">About Me</h2>
+
+    <dl>
+      <dt>What is your real name?</dt>
+      <dd>Stephan (IPA: /stɪpɦɑn/.)</dd>
+
+      <dt>How old are you?</dt>
+      <dd id="calculated-age"></dd>
+
+      <dt>Where are you from?</dt>
+      <dd>The south-western part of South Africa.</dd>
+
+      <dt>Why the name PolarizedIons?</dt>
+      <dd>Well, I wanted a unique name for myself online, and one day in chemisty class I saw something like that in a
+        book. I decided there and then that PolarizedIons will be me.</dd>
+
+      <dt>What languages do you know?</dt>
+      <dd>Afrikaans, English, with a few programming languages thown in as well.</dd>
+
+      <dt>Favourite game?</dt>
+      <dd>Probably either Minecraft, Skyrim, or Portal 2. Oblivion, Celeste and the Half Life series are cool too
+        though!</dd>
+
+      <dt>Favourite type of music?</dt>
+      <dd>Hard question! I go through phases where I listen to the same artist a lot, and sometimes nothing at all.</dd>
+
+      <dt>What did you make this website with?</dt>
+      <dd>Plain html and css, hosted on Cloudflare.</dd>
+
+      <dt>What is your job/occupation?</dt>
+      <dd>I'm currently a fulltime, fullstack software developer at a company in South Africa.</dd>
+
+      <dt>What is a random fact about you?</dt>
+      <dd id="calculated-fact"></dd>
+    </dl>
+  </section>
+
+  <script>
+    const age = () => {
+      const ageDifMs = new Date().getTime() - new Date('1998/07/13').getTime();
+      const ageDate = new Date(ageDifMs);
+      return Math.abs(ageDate.getUTCFullYear() - 1970);
+    };
+
+    const facts = [
+      "I have bad social anxiety - if I don't answer your phone call, this is why!",
+      'I love hate pop music.',
+      'I can listen to almost any type of music, except rap/hard metal.',
+      'I love pumpkin soup.',
+      'Sometimes I listen to music all the time, sometimes I go weeks without listening to one song.',
+      "Sometimes on a whim, I'll rearange my bedroom completely.",
+      "I never studied at a universety, though people still think I'm good at what I do.",
+      "My cat's name is Zoey.",
+      'I stole this random-quote idea from my friend Ellpeck.',
+      "I almost never finish projects, but I'm pretty proud of those I do finish.",
+      "I've never left the country.",
+      'I have more international friends, than local ones.',
+      'I suck at public speaking.',
+      'According to 16personalities, I am an ISFP.',
+      'I have a discord snapback, whose import-costs, cost more than the actual hat.',
+      "I don't like scented candles.",
+    ];
+
+    const getRandomFact = () => facts[Math.floor(Math.random() * facts.length)];
+
+    document.getElementById("calculated-age").innerText = age();
+
+    const randomFactEl = document.getElementById("calculated-fact");
+    const setRandomFact = () => randomFactEl.innerText = getRandomFact();
+    randomFactEl.onclick = setRandomFact;
+    setRandomFact();
+  </script>
 </body>
 
 </html>
