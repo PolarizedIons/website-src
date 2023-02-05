@@ -1,20 +1,14 @@
 :root {
   --background-gray: #131313;
-  --background-accent-heading-blue: #193338;
   --background-accent-red: #be3535;
   --background-accent-purple: #6b368a;
   --background-accent-blue: #445aa3;
 
   --text-h1: 3rem;
-  --text-h2: 1.7rem;
+  --text-h2: 2.3rem;
   --text-big: 1.2rem;
 
   --color-white: #f1f1f1;
-  --color-link: var(--background-accent-blue);
-
-  --padding-y-section-heading: 1rem;
-  --padding-x-section-heading: 3rem;
-  --padding-section-heading: var(--padding-y-section-heading) var(--padding-x-section-heading);
 }
 
 * {
@@ -27,35 +21,46 @@ body {
   padding: 0;
   background: var(--background-gray);
   color: var(--color-white);
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Unbounded', sans-serif;
   font-weight: 400;
 }
 
-header {
+header#main {
   position: sticky;
   top: 0;
   width: 100%;
-  background: var(--background-accent-heading-blue);
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+  background: var(--background-gray);
   padding: 1.5rem 3rem;
 
   display: flex;
-  justify-content: space-between;
+  gap: 2rem;
   align-items: center;
 
   z-index: 10;
 }
 
-header img {
+header#main h1 {
+  --text-color: var(--background-accent-blue);
+}
+
+header#main img {
   max-width: 5rem;
   border-radius: 8px;
+  box-shadow: 4px 4px var(--background-accent-blue);
 }
 
 h1,
 h2 {
-  font-weight: 300;
+  font-weight: 500;
   margin: 0;
+  text-shadow: 4px 4px var(--text-color);
+  will-change: text-shadow;
+  transition: all 100ms ease-in-out;
+}
+
+h1:hover,
+h2:hover {
+  text-shadow: -4px -4px var(--text-color);
 }
 
 h1 {
@@ -66,15 +71,16 @@ h1 {
 h2 {
   font-size: var(--text-h2);
   line-height: var(--text-h2);
+  display: inline;
+}
+
+header:not(#main) {
+  display: flex;
+  justify-content: center;
 }
 
 section h2 {
-  background: var(--section-heading-bg);
-  margin: 3rem 0 1rem 0;
-  padding: var(--padding-section-heading);
-  width: 75%;
-  position: relative;
-  z-index: 1;
+  text-align: center;
 }
 
 section h2::after {
@@ -99,8 +105,9 @@ a {
 ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  margin: 2rem;
+  margin: 4rem 0;
   padding: 0;
 }
 
@@ -111,14 +118,19 @@ li {
 
 li a {
   padding: 1rem 2rem;
-  border: 2px solid var(--background-accent-blue);
+  border: 2px solid var(--background-accent-red);
   font-weight: 600;
   transition: all ease-in-out 200ms;
+  border-radius: 1rem;
+  box-shadow: 4px 4px var(--background-accent-red);
+  will-change: box-shadow;
+  transition: all 100ms ease-in-out;
 }
 
 li a:hover {
   color: var(--color-white);
-  background: var(--background-accent-blue);
+  /* background: var(--background-accent-red); */
+  box-shadow: -4px -4px var(--background-accent-red);
 }
 
 dl {
@@ -127,18 +139,38 @@ dl {
 }
 
 dt {
-  margin: 0;
-  padding: 0;
   font-weight: 600;
   font-size: var(--text-big);
   line-height: var(--text-big);
+  border-bottom: 4px solid var(--background-accent-purple);
+  display: table;
+
+  transition: all 100ms ease-in-out;
+  will-change: margin, padding;
+  margin: 0 0;
+  padding: 0 0;
 }
+
+dt:hover {
+  margin: 0 -1rem;
+  padding: 0 1rem;
+}
+
 
 dd {
   margin: 0.5rem 1rem;
-  display: inline-block;
+  display: table;
 }
 
 #calculated-fact {
   cursor: pointer;
+  user-select: none;
+}
+
+.red {
+  --text-color: var(--background-accent-red)
+}
+
+.purple {
+  --text-color: var(--background-accent-purple)
 }

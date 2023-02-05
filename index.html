@@ -7,19 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <title>PolarizedIons.net</title>
 </head>
 
 <body>
-  <header>
-    <h1>PolarizedIons</h1>
+  <header id="main">
     <img src="./img/me.jpg" alt="profile picture" />
+    <h1>PolarizedIons</h1>
   </header>
 
   <section>
-    <h2 style="--section-heading-bg: var(--background-accent-red);">Socials</h2>
+    <header>
+      <h2 class="red">Socials</h2>
+    </header>
 
     <ul>
       <li><a rel="me" href="https://github.com/PolarizedIons">Github</a></li>
@@ -29,7 +31,9 @@
   </section>
 
   <section>
-    <h2 style="--section-heading-bg: var(--background-accent-purple);">About Me</h2>
+    <header>
+      <h2 class="purple">About Me</h2>
+    </header>
 
     <dl>
       <dt>What is your real name?</dt>
@@ -75,7 +79,7 @@
 
     const facts = [
       "I have bad social anxiety - if I don't answer your phone call, this is why!",
-      'I love hate pop music.',
+      'I like pop music.',
       'I can listen to almost any type of music, except rap/hard metal.',
       'I love pumpkin soup.',
       'Sometimes I listen to music all the time, sometimes I go weeks without listening to one song.',
