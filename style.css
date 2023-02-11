@@ -1,5 +1,5 @@
 :root {
-  --background-gray: #131313;
+  --background-gray: #111111;
   --background-accent-red: #be3535;
   --background-accent-purple: #6b368a;
   --background-accent-blue: #445aa3;
@@ -13,6 +13,8 @@
 
 * {
   box-sizing: border-box;
+  z-index: 5;
+  position: relative;
 }
 
 html,
@@ -23,6 +25,10 @@ body {
   color: var(--color-white);
   font-family: 'Unbounded', sans-serif;
   font-weight: 400;
+}
+
+body, a {
+  cursor: url('/img/cursor.svg') 2 6, default;
 }
 
 header#main {
@@ -47,6 +53,12 @@ header#main img {
   max-width: 5rem;
   border-radius: 8px;
   box-shadow: 4px 4px var(--background-accent-blue);
+  will-change: box-shadow;
+  transition: all 100ms ease-in-out;
+}
+
+header#main img:hover {
+  box-shadow: -4px -4px var(--background-accent-blue);
 }
 
 h1,
@@ -92,9 +104,6 @@ section h2::after {
 
   width: 0;
   height: 0;
-  border-bottom: calc(var(--text-h2) + (2 * var(--padding-y-section-heading))) solid var(--background-gray);
-  border-left: calc(var(--text-h2) + (2 * var(--padding-y-section-heading))) solid transparent;
-  border-right: calc(var(--text-h2) + (2 * var(--padding-y-section-heading))) solid transparent;
 }
 
 a {
@@ -117,6 +126,7 @@ li {
 }
 
 li a {
+  background: var(--background-gray);
   padding: 1rem 2rem;
   border: 2px solid var(--background-accent-red);
   font-weight: 600;
@@ -129,7 +139,6 @@ li a {
 
 li a:hover {
   color: var(--color-white);
-  /* background: var(--background-accent-red); */
   box-shadow: -4px -4px var(--background-accent-red);
 }
 
@@ -163,7 +172,7 @@ dd {
 }
 
 #calculated-fact {
-  cursor: pointer;
+  /* cursor: pointer; */
   user-select: none;
 }
 
@@ -173,4 +182,13 @@ dd {
 
 .purple {
   --text-color: var(--background-accent-purple)
+}
+
+#canvas-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
 }
